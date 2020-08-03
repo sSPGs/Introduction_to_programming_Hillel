@@ -8,11 +8,29 @@
 # bla
 # bla
 
-# 2) У вас есть переменная my_str, тип - str. И переменная my_symbol, тип - str. Напечатать ЧИСЛО сколько раз my_symbol встречается в my_str.
+
+my_str = str("blablacar")
+my_symbol = str("bla")
+count = my_str.count(my_symbol)
+while count >= 0:
+    print(my_symbol)
+    count = count - 2
+
+
+
+
+
+#2) У вас есть переменная my_str, тип - str. И переменная my_symbol, тип - str. Напечатать ЧИСЛО сколько раз my_symbol встречается в my_str.
 # Пример:  my_str="blablacar", my_symbol="bla".
 # Вывод на экран:
 # 2
 # ##
+
+my_str = str(input("Введите строку"))
+my_symbol = str(input("Введите искомое в строке"))
+count = my_str.count(my_symbol)
+print(f"Совпадений: {count}")
+
 
 # 3) У вас есть переменная my_str, тип - str. Напечатать ЧИСЛО сколько РАЗНЫХ символов встречается в my_str. Большая и маленькая буква считается как один символ. Пробелы, запятые и т.д. считаем тоже как символы.
 # Пример:  my_str="bla BLA car".
