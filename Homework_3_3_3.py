@@ -4,7 +4,7 @@
 
 # 6
 
-my_str = str(input('s = '))
+my_str = str(input('Введите строку'))
 a = my_str.lower()
 
 print('различных символов = ', len(set(a)))
