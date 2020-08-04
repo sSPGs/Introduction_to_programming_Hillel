@@ -68,7 +68,7 @@ my_str = str(input("8) Вывести на экран все символы, к�
 
 for symbol in my_str:
     if symbol in '~!@#$%^&*()_+<>?/"\;=|-_[]{}<>.,` ':
-        break
+        continue
     else:
         print(symbol)
 
