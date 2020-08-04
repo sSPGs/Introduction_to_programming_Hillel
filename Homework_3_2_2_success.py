@@ -5,4 +5,5 @@ value = int(input("2) если value меньше 100, то new_value равно
 
 new_value = print(1) if value < 100 else print(0)
 
+
 #####################################################
