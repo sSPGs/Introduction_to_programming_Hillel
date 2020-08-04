@@ -47,7 +47,7 @@ print(my_str.lower())
 
 #6) У вас есть переменная my_str, тип - str. Если ее длинна меньше 5, то допишите в конец строки себя же.
 # Пример: было - "qwer", стало - "qwerqwer". Если длинна не меньше 5, то оставить строку как есть.
-
+#
 my_str = str(input("6) Если длинна меньше 5, то допишите в конец строки себя же, Если длинна не меньше 5, то оставить строку как есть "))
 
 new_value = print(my_str + my_str) if len(my_str) < 5 else print(my_str)
@@ -56,7 +56,7 @@ new_value = print(my_str + my_str) if len(my_str) < 5 else print(my_str)
 
 #7) У вас есть переменная my_str, тип - str. Если ее длинна меньше 5, то допишите в конец строки перевернутую себя же.
 # Пример: было - "qwer", стало - "qwerrewq". Если длинна не меньше 5, то оставить строку как есть.
-
+#
 my_str = str(input("7) Если ее длинна меньше 5, то допишите в конец строки перевернутую себя же, если длинна не меньше 5, то оставить строку как есть "))
 
 new_value = print(my_str + my_str[::-1]) if len(my_str) < 5 else print(my_str)
@@ -67,7 +67,7 @@ new_value = print(my_str + my_str[::-1]) if len(my_str) < 5 else print(my_str)
 my_str = str(input("8) Вывести на экран все символы, которые являются буквой или цифрой."))
 
 for symbol in my_str:
-    if symbol in '~!@#$%^&*()_+<>?/"\;=|-_[]{}<>.,` ':
+    if symbol in """!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~""":
         continue
     else:
         print(symbol)
@@ -79,7 +79,7 @@ for symbol in my_str:
 my_str = str(input("9) Вывести на экран все символы, которые не являются буквой или цифрой"))
 
 for symbol in my_str:
-    if symbol in '~!@#$%^&*()_+<>?/"\;=|-_[]{}<>.,` ':
+    if symbol in """!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ """:
         print(symbol)
     else:
         continue
@@ -93,7 +93,7 @@ for symbol in my_str:
 my_str = str(input("10) Вывести на экран все символы, которые не являются буквой или цифрой и не пробел"))
 
 for symbol in my_str:
-    if symbol in '~!@#$%^&*()_+<>?/"\;=|-_[]{}<>.,`':
+    if symbol in  """!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~""":
         print(symbol)
     else:
         continue
