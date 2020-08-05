@@ -24,26 +24,26 @@
 
 
 
-#
+############РАБОТА В КЛАCСЕ##########################
 # 1.
 # Дана строка my_str и пустой список my_list.
-# Заполнить my_list символами из my_str, которые стоят на четных местах в строке
-
+# # Заполнить my_list символами из my_str, которые стоят на четных местах в строке
+#
 # my_str = 'sadasfsagsgs'
 # my_list = []
 # my_str = list(my_str)
 # a = my_str[::2] + my_list
 #
 # print(a)
-
-
-
-# 2.
-# Дана строка my_str, список str_index целых чисел в диапазоне от 0 до длинны строки, пустой список my_list.
-# Заполнить my_list символами из my_str, которые стоят на местах с индексами из str_index
 #
-
-
+#
+#
+# # 2.
+# # Дана строка my_str, список str_index целых чисел в диапазоне от 0 до длинны строки, пустой список my_list.
+# # Заполнить my_list символами из my_str, которые стоят на местах с индексами из str_index
+# #
+#
+#
 # str_index = [0, 2, 4, 5, 3, 5, 2, 2, 5, 3, 3]
 # my_str = 'qwerty'
 # my_list = []
@@ -62,7 +62,7 @@
 #Генератор RANGE  for value in range
 
 my_list_1 = [10, 20, 30]
-my_list_2 = [3, 4, 5]
+my_list_2 = [3, 4, 5, 123, 12]
 my_result = []
 
 if len(my_list_1) == len(my_list_2):
@@ -71,7 +71,14 @@ if len(my_list_1) == len(my_list_2):
         my_result.append(my_list_2[index])
 
 else:
-    pass
+    if len(my_list_1) < len(my_list_2):
+        my_list_1, my_list_2 = my_list_2, my_list_1
+
+    for index in range(len(my_list_2)):
+        my_result.append(my_list_1[index])
+        my_result.append(my_list_2[index])
+    # my_result += my_list_1[len(my_list_2):]
+    # my_result.extend()
 print(my_result)
 
 # 4.
@@ -80,7 +87,23 @@ print(my_result)
 #
 # 5.
 # Дано целое число. Определить сколько цифр в этом числе.
-#
+
+
+my_int = int(12312412429142121521)
+my_int = str(my_int)
+print(max(my_int))
+
+
+a = 3
+b = 4
+z = [1,2,3,4,5]
+
+
+
+
+
+
+
 # 6.
 # Дано целое число. Определить наибольшую цифру в этом числе.
 #
