@@ -61,55 +61,70 @@
 
 #Генератор RANGE  for value in range
 
-my_list_1 = [10, 20, 30]
-my_list_2 = [3, 4, 5, 123, 12]
-my_result = []
-
-if len(my_list_1) == len(my_list_2):
-    for index in range(len(my_list_1)):
-        my_result.append(my_list_1[index])
-        my_result.append(my_list_2[index])
-
-else:
-    if len(my_list_1) < len(my_list_2):
-        my_list_1, my_list_2 = my_list_2, my_list_1
-
-    for index in range(len(my_list_2)):
-        my_result.append(my_list_1[index])
-        my_result.append(my_list_2[index])
-    # my_result += my_list_1[len(my_list_2):]
-    # my_result.extend()
-print(my_result)
-
-# 4.
-# Даны списки my_list_1 и my_list_2.
-# Создать список my_result в который поместить четные элементы из my_list_1 и нечетные элементы из my_list_2.
+# my_list_1 = [10, 20, 30]
+# my_list_2 = [3, 4, 5, 123, 12]
+# my_result = []
 #
-# 5.
-# Дано целое число. Определить сколько цифр в этом числе.
-
-
-my_int = int(12312412429142121521)
-my_int = str(my_int)
-print(max(my_int))
-
-
-a = 3
-b = 4
-z = [1,2,3,4,5]
-
-
-
-
-
-
-
-# 6.
-# Дано целое число. Определить наибольшую цифру в этом числе.
+# if len(my_list_1) == len(my_list_2):
+#     for index in range(len(my_list_1)):
+#         my_result.append(my_list_1[index])
+#         my_result.append(my_list_2[index])
 #
+# else:
+#     if len(my_list_1) < len(my_list_2):
+#         my_list_1, my_list_2 = my_list_2, my_list_1
+#
+#     for index in range(len(my_list_2)):
+#         my_result.append(my_list_1[index])
+#         my_result.append(my_list_2[index])
+#     # my_result += my_list_1[len(my_list_2):]
+#     # my_result.extend()
+# print(my_result)
+#
+# # 4.
+# # Даны списки my_list_1 и my_list_2.
+# # Создать список my_result в который поместить четные элементы из my_list_1 и нечетные элементы из my_list_2.
+# #
+# # 5.
+# # Дано целое число. Определить сколько цифр в этом числе.
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# # 6.
+# # Дано целое число. Определить наибольшую цифру в этом числе.
+#
+#
+#
+#
+# my_int = int(12312412429142121521)
+# my_int = str(my_int)
+# print(max(my_int))
+#
+#
+# a = 3
+# b = 4
+# z = [1,2,3,4,5]
 # 7.
 # Дано целое число. Составить число с цифрами в обратном порядке.
+
+# number = "123sad456789"
+# print(max(number))
 #
+# print(int(str(number)))
+
+my_list = [3, 5, -6]
+new_list = sorted(my_list) # внешняя сортировка
+# my_list.sort() # внутренняя сортировка
+print(my_list)
+print(new_list)
+
 # 8.
 # Дано целое число. Составить число с цифрами в порядке возрастания.
 # """
