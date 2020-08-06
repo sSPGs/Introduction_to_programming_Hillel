@@ -15,6 +15,7 @@ for symbol in my_str[::2]:
     my_list.append(symbol)
 print(my_list)
 
+
 """
 2.
 Дана строка my_str, список str_index целых чисел в диапазоне от 0 до длинны строки, пустой список my_list.
