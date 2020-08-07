@@ -16,7 +16,21 @@
 #"23"	# перебирается все элементы из my_string_2 для элемента "2" из my_string_1
 #"24"
 
+#######################################################################
 
+my_string = '0123456789'
+my_list = []
+
+index = len(my_string)
+
+my_string = list(my_string)
+
+for symb_1 in my_string:
+    for symb_2 in my_string:
+        print(symb_1 + symb_2)
+
+#########################################################################
+# print(symb_1 + symb_2)
 
 
 
