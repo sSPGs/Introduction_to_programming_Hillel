@@ -28,7 +28,7 @@
 
 
 # my_str = "My name is Vova. I am a teatcher !"
-w for symbol in my_str:
+#  for symbol in my_str:
 #     if not symbol.isupper() and symbol.isalpha():
 #         print(symbol)
 
