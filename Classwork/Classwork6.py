@@ -71,10 +71,36 @@
 
 #######Задача: Вывести символ и его количество повторов#######################################3#
 
+#
+# my_str = 'afggllhflyuasfyldfayfljv lavalafshlfscfcaflgsfcadshvas fgcahgecf.gdsfc jgsafc.j'
+#
+# set_my_str = set(my_str) # SET
+#
+# for symbol in set_my_str: # Цикл по множеству # перебераем символы и выводим их количество по строчно
+#     print(f'{symbol}: {my_str.count(symbol)} шт.')
 
-my_str = 'afggllhflyuasfyldfayfljv lavalafshlfscfcaflgsfcadshvas fgcahgecf.gdsfc jgsafc.j'
+####################################################################################################3#
 
-set_my_str = set(my_str) # SET
+#########################CЛОВАРЬ################################
 
-for symbol in set_my_str: # перебераем символы и выводим их количество по строчно
-    print(f'{symbol}: {my_str.count(symbol)}')
+# my_dict = {"key_1": 123,        #####Пара ключ и значение ключ может быть любое не изменяемое значение
+#            "key_2": 345,
+#            "key_3": 32115,
+#            5: "Output"}
+#
+# for itt in my_dict:
+#     print(my_dict)
+
+
+person = {"Name": "Vova",
+          "Age": 40,
+          "address": {
+              "City": "Dnipro",
+              "Street": "Polya"
+          }}
+person["Last Name"] = "Zontov"
+person["address"]["House"] = "A.Polya 10b"
+print(person)
+
+
+####################################################################################################3#
