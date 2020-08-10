@@ -21,34 +21,19 @@ print("######################################################")
 '''6. Дана строка в которой есть числа (разделяются пробелами). 
 Например "43 больше чем 34, но меньше чем 56". Найти сумму ВСЕХ чисел в этой строке.'''
 
+
 my_str = "43 больше чем 34, но меньше чем 56"
 my_str.split()
-box_str = []
 box_int = []
-box_int_sum = []
-box_forward_string_to_int_step = ''
 
+'''Цикл for iter_str_and_int in my_str:  '''
 for iter_str_and_int in my_str:
     if iter_str_and_int in "1234567890":
-        box_int.append((iter_str_and_int))
+        iter_str_and_int = int(iter_str_and_int)
+        box_int.append((iter_str_and_int)) ## Выбераем из строки  цифры и помещаем в список box_int
     else:
-        box_str.append(iter_str_and_int)
+        pass
+print(sum(box_int))
 
-box_forward_string_to_int_step = box_forward_string_to_int_step.join(box_int)
-# print(f"BOX_STR {box_str}")
-print(f"BOX_INT {(box_int)}")
-print(f"box_forward_string_to_int_step::::::::::>>> {(box_forward_string_to_int_step)}")
-
-box_forward_string_to_int_step = int(box_forward_string_to_int_step)
-
-for itt_box_forward_int in box_int_sum:
-    box_int_sum = box_int_sum.append(itt_box_forward_int)
-    # print(box_int_sum)
-print(f"ТИП box_forward_string_to_int_step {type(box_forward_string_to_int_step)}")
-print(box_forward_string_to_int_step)
-
-print(type(box_int_sum))
-
-print(box_int_sum)
 print("######################################################")
 
