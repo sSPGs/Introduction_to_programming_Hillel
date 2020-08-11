@@ -35,10 +35,6 @@ print("######################################################")
 my_str = "43 больше чем 34, но меньше чем 56"
 my_str.split()
 box_int = []
-box_int_1 = []
-box_int_2 = []
-box_int_3 = []
-
 
 '''Цикл for iter_str_and_int in my_str:  '''
 for iter_str_and_int in my_str:
@@ -48,13 +44,26 @@ for iter_str_and_int in my_str:
     else:
         pass
 
-for itt_int in range(box_int):
-    val = int(box_int[itt_int])
-    box_int_1.append(val)
+a, b = box_int[0], box_int[1]
+a = str(a)
+b = str(b)
+ab = a+b
+ab = int(ab)
 
+c, d = box_int[2], box_int[3]
+c = str(c)
+d = str(d)
+cd = c+d
+cd = int(cd)
 
+e, f = box_int[4], box_int[5]
+e = str(e)
+f = str(f)
+ef = e + f
+ef = int(ef)
 
-# print(sum(box_int))
+res = (ab + cd + ef)
+print(res)
 
 print("######################################################")
 ####################################################
@@ -63,8 +72,6 @@ print("######################################################")
 
 '''2. Дано целое число (int). Определить сколько нулей в конце этого числа.'''
 ####################################################
-
-
 
 
 
