@@ -9,14 +9,35 @@
 my_list = ["5 Horse", 123, 5135, 3624, "13 _ 153", 135]
 
 new_my_list = []
+# new_my_list_4et = []
+new_my_list_Ne4et = []
+box_ne4 = []
+
 
 for ind, val in enumerate(my_list):
     if ind % 2:
-        print(f"ЧЕТ => {val}")
+        pass
+        if type(val) == int:
+
+            val = str(val)
+            new_my_list_Ne4et.append(val)
+            ne4 = new_my_list_Ne4et
+
+        else:
+            pass
     else:
+        new_my_list.append(val)
 
-        print(f"НЕЧЕТ => {val}")
-
+for ind_ne4, val_ne4 in enumerate(new_my_list_Ne4et):
+    val_ne4 = val_ne4[::-1]
+    box_ne4.append(val_ne4)
+    print(f"ТИП VAL_NE4:::> {type(val_ne4)},{val_ne4}")
+    for i, val in enumerate(val_ne4):
+        val = list(val)
+a = new_my_list
+b = box_ne4
+new_my_list = a + b
+print(new_my_list)
 
 #######################################################################
 '''
