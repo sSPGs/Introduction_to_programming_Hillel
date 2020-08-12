@@ -6,38 +6,38 @@
 Задание сделать с использованием enumerate.'''
 #######################################################################
 
-my_list = ["5 Horse", 123, 5135, 3624, "13 _ 153", 135]
-
-new_my_list = []
-# new_my_list_4et = []
-new_my_list_Ne4et = []
-box_ne4 = []
-
-
-for ind, val in enumerate(my_list):
-    if ind % 2:
-        pass
-        if type(val) == int:
-
-            val = str(val)
-            new_my_list_Ne4et.append(val)
-            ne4 = new_my_list_Ne4et
-
-        else:
-            pass
-    else:
-        new_my_list.append(val)
-
-for ind_ne4, val_ne4 in enumerate(new_my_list_Ne4et):
-    val_ne4 = val_ne4[::-1]
-    box_ne4.append(val_ne4)
-    print(f"ТИП VAL_NE4:::> {type(val_ne4)},{val_ne4}")
-    for i, val in enumerate(val_ne4):
-        val = list(val)
-a = new_my_list
-b = box_ne4
-new_my_list = a + b
-print(new_my_list)
+# my_list = ["5 Horse", 123, 5135, 3624, "13 _ 153", 135]
+#
+# new_my_list = []
+# # new_my_list_4et = []
+# new_my_list_Ne4et = []
+# box_ne4 = []
+#
+#
+# for ind, val in enumerate(my_list):
+#     if ind % 2:
+#         pass
+#         if type(val) == int:
+#
+#             val = str(val)
+#             new_my_list_Ne4et.append(val)
+#             ne4 = new_my_list_Ne4et
+#
+#         else:
+#             pass
+#     else:
+#         new_my_list.append(val)
+#
+# for ind_ne4, val_ne4 in enumerate(new_my_list_Ne4et):
+#     val_ne4 = val_ne4[::-1]
+#     box_ne4.append(val_ne4)
+#     print(f"ТИП VAL_NE4:::> {type(val_ne4)},{val_ne4}")
+#     for i, val in enumerate(val_ne4):
+#         val = list(val)
+# a = new_my_list
+# b = box_ne4
+# new_my_list = a + b
+# print(new_my_list)
 
 #######################################################################
 '''
@@ -46,7 +46,11 @@ print(new_my_list)
 '''
 #######################################################################
 
-
+my_list = ["baasasdasfaw", "askasknfmncxnb.a\e", "asfasfcxxczzzzz1`1112", "sasfadasf", "eet2344", "asdvxczzasfa", "asa", "a1", "s1", "b1", "b2", "basd21", "as22211sv!", "a_a", "as1", "_a", "aaa2222"]
+my_list.sort()
+my_list_box = []
+print(my_list)
+a = my_list.count(my_list)
 
 
 
@@ -123,21 +127,21 @@ else:
 '''
 #######################################################################
 
-person = {"Фамилия": "Гречуха",
-          "Имя": "Владимир",
-          "Возраст": 27,
-          "Проживание": {
-              "Страна": "Украина",
-              "Город": "Днепр",
-              "Улица": "Владимира Антоновича",
-          },
-          "Работа": {
-              "Наличие": "Да",
-              "Должность": "Инженер компьютерных систем"
-          }
-          }
-
-print(person)
+# person = {"Фамилия": "Гречуха",
+#           "Имя": "Владимир",
+#           "Возраст": 27,
+#           "Проживание": {
+#               "Страна": "Украина",
+#               "Город": "Днепр",
+#               "Улица": "Владимира Антоновича",
+#           },
+#           "Работа": {
+#               "Наличие": "Да",
+#               "Должность": "Инженер компьютерных систем"
+#           }
+#           }
+#
+# print(person)
 
 #######################################################################
 '''
@@ -161,25 +165,25 @@ print(person)
 #######################################################################
 
 
-dict_tort = {"Коржи": {
-    "Мука": 12,
-    "Молоко": 12,
-    "Масло": 12312,
-    "Яйцо": 121312,
-},
-    "Крем": {
-        "Сахар": 12,
-        "Масло": 12,
-        "Ваниль": 12312,
-        "Сметана": 121312,
-    },
-    "Глазурь": {
-        "Какао": 12,
-        "Сахар": 12,
-        "Масло": 12312,
-    }
-}
-
-print(dict_tort["Глазурь"])
+# dict_tort = {"Коржи": {
+#     "Мука": 12,
+#     "Молоко": 12,
+#     "Масло": 12312,
+#     "Яйцо": 121312,
+# },
+#     "Крем": {
+#         "Сахар": 12,
+#         "Масло": 12,
+#         "Ваниль": 12312,
+#         "Сметана": 121312,
+#     },
+#     "Глазурь": {
+#         "Какао": 12,
+#         "Сахар": 12,
+#         "Масло": 12312,
+#     }
+# }
+#
+# print(dict_tort["Глазурь"])
 
 #######################################################################
