@@ -20,7 +20,7 @@
 #         if type(val) == int:
 #
 #             val = str(val)
-#             new_my_list_Ne4et.append(val)
+#             # new_my_list_Ne4et.append(val)
 #             ne4 = new_my_list_Ne4et
 #
 #         else:
