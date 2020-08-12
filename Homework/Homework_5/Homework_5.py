@@ -114,11 +114,12 @@ print(my_result)
 
 ####################################################
 
-
-
-
-
-
+my_list = [1, 2, 3, 4]
+# my_list.insert(0, 2)
+my_list.insert(0, my_list.pop(1))
+my_list.insert(1, my_list.pop(2))
+my_list.insert(2, my_list.pop(3))
+print(my_list)
 
 
 
