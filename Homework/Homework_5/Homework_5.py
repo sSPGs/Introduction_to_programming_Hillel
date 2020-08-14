@@ -6,12 +6,12 @@
 '''"1. Дано целое число (int). Определить сколько нулей в этом числе.'''
 #####################################################
 
-# numb = 1021284010000000122310355653043015134
-#
-# sum_numb = str(numb)
-# sum_total = sum_numb.count("0")
-#
-# print(f'В числе {numb}\nКол-во НУЛЕЙ: {sum_total}')
+numb = 1021284010000000122310355653043015134
+
+sum_numb = str(numb)
+sum_total = sum_numb.count("0")
+
+print(f'В числе {numb}\nКол-во НУЛЕЙ: {sum_total}')
 print("######################################################")
 
 ####################################################
@@ -19,18 +19,18 @@ print("######################################################")
 '''2. Дано целое число (int). Определить сколько нулей в конце этого числа.'''
 ####################################################
 
-numb_int = 10203000
-numb_str = str(numb_int)
-
-# numb_str = numb_str[::-1]
-
-len_numb_str = len(numb_str)
-idx_len_numb_str = len_numb_str - 1
-count_numb_str = 0
-print(numb_str)
-
-# while idx_len_numb_str >= 0:
-#     idx_len_numb_str -= idx_len_numb_str
+# numb_int = 10203000
+# numb_str = str(numb_int)
+#
+# # numb_str = numb_str[::-1]
+#
+# len_numb_str = len(numb_str)
+# idx_len_numb_str = len_numb_str - 1
+# count_numb_str = 0
+# print(numb_str)
+#
+# # while idx_len_numb_str >= 0:
+# #     idx_len_numb_str -= idx_len_numb_str
 #     if numb_str[idx_len_numb_str] == '0':
 #         numb_str.count('0')
 #         print(numb_str)
@@ -45,22 +45,22 @@ print(numb_str)
 из my_list_1 и потом нечетные элементы из my_list_2.'''
 ####################################################
 
-# my_list_1 = [2, 6, 112, 12, 113, 1235]
-# my_list_2 = [5, 121, 5135, 3624, 13153, 135]
-# my_result = []
-#
-# for idx, val in enumerate(my_list_1):
-#     if idx % 2:
-#         my_result.append(val)
-#     else:
-#         pass
-# for idx, val in enumerate(my_list_2):
-#     if idx % 2:
-#         pass
-#     else:
-#         my_result.append(val)
-# print(my_result)
-#
+my_list_1 = [2, 6, 112, 12, 113, 1235]
+my_list_2 = [5, 121, 5135, 3624, 13153, 135]
+my_result = []
+
+for idx, val in enumerate(my_list_1):
+    if idx % 2:
+        my_result.append(val)
+    else:
+        pass
+for idx, val in enumerate(my_list_2):
+    if idx % 2:
+        pass
+    else:
+        my_result.append(val)
+print(my_result)
+
 #         ####################################################
 
 
@@ -69,11 +69,11 @@ print(numb_str)
 Если my_list [1,2,3,4], то new_list [2,3,4,1]'''
 ####################################################
 
-# my_list = [1, 2, 3, 4]
-# new_list = my_list
-# new_list.append(new_list.pop(0))
-# print(new_list)
-# print("######################################################")
+my_list = [1, 2, 3, 4]
+new_list = my_list
+new_list.append(new_list.pop(0))
+print(new_list)
+print("######################################################")
 
 ####################################################
 
@@ -82,12 +82,12 @@ print(numb_str)
 
 ####################################################
 
-# my_list = [1, 2, 3, 4]
-# # my_list.insert(0, 2)
-# my_list.insert(0, my_list.pop(1))
-# my_list.insert(1, my_list.pop(2))
-# my_list.insert(2, my_list.pop(3))
-# print(my_list)
+my_list = [1, 2, 3, 4]
+# my_list.insert(0, 2)
+my_list.insert(0, my_list.pop(1))
+my_list.insert(1, my_list.pop(2))
+my_list.insert(2, my_list.pop(3))
+print(my_list)
 
 
 
@@ -102,38 +102,38 @@ print(numb_str)
 Например "43 больше чем 34, но меньше чем 56". Найти сумму ВСЕХ чисел в этой строке.'''
 ####################################################
 
-# my_str = "43 больше чем 34, но меньше чем 56"
-# my_str.split()
-# box_int = []
-#
-# '''Цикл for iter_str_and_int in my_str:  '''
-# for iter_str_and_int in my_str:
-#     if iter_str_and_int in "1234567890":
-#         iter_str_and_int = int(iter_str_and_int)
-#         box_int.append((iter_str_and_int)) ## Выбераем из строки  цифры и помещаем в список box_int
-#     else:
-#         pass
-#
-# a, b = box_int[0], box_int[1]
-# a = str(a)
-# b = str(b)
-# ab = a+b
-# ab = int(ab)
-#
-# c, d = box_int[2], box_int[3]
-# c = str(c)
-# d = str(d)
-# cd = c+d
-# cd = int(cd)
-#
-# e, f = box_int[4], box_int[5]
-# e = str(e)
-# f = str(f)
-# ef = e + f
-# ef = int(ef)
-#
-# res = (ab + cd + ef)
-# print(res)
+my_str = "43 больше чем 34, но меньше чем 56"
+my_str.split()
+box_int = []
+
+'''Цикл for iter_str_and_int in my_str:  '''
+for iter_str_and_int in my_str:
+    if iter_str_and_int in "1234567890":
+        iter_str_and_int = int(iter_str_and_int)
+        box_int.append((iter_str_and_int)) ## Выбераем из строки  цифры и помещаем в список box_int
+    else:
+        pass
+
+a, b = box_int[0], box_int[1]
+a = str(a)
+b = str(b)
+ab = a+b
+ab = int(ab)
+
+c, d = box_int[2], box_int[3]
+c = str(c)
+d = str(d)
+cd = c+d
+cd = int(cd)
+
+e, f = box_int[4], box_int[5]
+e = str(e)
+f = str(f)
+ef = e + f
+ef = int(ef)
+
+res = (ab + cd + ef)
+print(res)
 
 print("######################################################")
 ####################################################
@@ -162,10 +162,10 @@ my_str = "My_long str", l_limit = "o", r_limit = "t" -> sub_str = "ng s"'''
 
 ####################################################
 
-# my_str = "My_long str"
-#
-# sub_str = my_str[5:9]
-# print(sub_str)
+my_str = "My_long str"
+
+sub_str = my_str[5:9]
+print(sub_str)
 
 
 
