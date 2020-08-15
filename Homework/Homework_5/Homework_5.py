@@ -1,14 +1,13 @@
 
 '''"1. Дано целое число (int). Определить сколько нулей в этом числе.'''
 #####################################################
-from typing import List, Any
 
 numb = 1021284010000000122310355653043015134
 
 sum_numb = str(numb)
 sum_total = sum_numb.count("0")
 
-print(f'В числе {numb}\nКол-во НУЛЕЙ: {sum_total}')
+# print(f'В числе {numb}\nКол-во НУЛЕЙ: {sum_total}')
 print("######################################################")
 
 ####################################################
@@ -16,26 +15,23 @@ print("######################################################")
 '''2. Дано целое число (int). Определить сколько нулей в конце этого числа.'''
 ####################################################
 
-numb_int = 10203000
+numb_int = 102030000000000000
 numb_str = str(numb_int)
 numb_str = numb_str[::-1]
-a_str = []
-idx_base = []
-value_base = []
-count = 0
-res = []
+i_str_global = []
+# i_str_global = int(i_str_global)
+cnt = 0
 
+for i_str in numb_str[cnt::]:
+    if i_str == "0":
+        i_str_global.append(i_str)
+    else:
+        break
 
-for it, v in enumerate(numb_str):
-    idx_base.append(v)
-    for i in idx_base[i]:
-        idx_base[it] > "0":
+result = i_str_global.count("0")
 
+# print(f'В конце числа <<:{numb_int}:>>,  НУЛЕЙ {result}')
 
-
-
-print(f" TASK 2 VALUE {idx_base}")
-print(f" TASK 2  ID {value_base}")
 
 
 ####################################################
@@ -49,16 +45,14 @@ my_list_2 = [5, 121, 5135, 3624, 13153, 135]
 my_result = []
 
 for idx, val in enumerate(my_list_1):
-    if idx % 2:
+    if not val % 2:
         my_result.append(val)
-    else:
-        pass
+
 for idx, val in enumerate(my_list_2):
-    if idx % 2:
-        pass
-    else:
+    if val % 2:
         my_result.append(val)
-print(my_result)
+
+# print(my_result)
 
 #         ####################################################
 
@@ -69,9 +63,9 @@ print(my_result)
 ####################################################
 
 my_list = [1, 2, 3, 4]
-new_list = my_list
+new_list = my_list.copy()
 new_list.append(new_list.pop(0))
-print(new_list)
+# print(new_list)
 print("######################################################")
 
 ####################################################
@@ -82,19 +76,12 @@ print("######################################################")
 ####################################################
 
 my_list = [1, 2, 3, 4]
-# my_list.insert(0, 2)
-my_list.insert(0, my_list.pop(1))
-my_list.insert(1, my_list.pop(2))
-my_list.insert(2, my_list.pop(3))
-print(my_list)
-
-
+new_list = my_list
+new_list.append(new_list.pop(0))
+# print(new_list)
 
 
 ####################################################
-
-
-
 
 
 '''6. Дана строка в которой есть числа (разделяются пробелами). 
@@ -132,7 +119,7 @@ ef = e + f
 ef = int(ef)
 
 res = (ab + cd + ef)
-print(res)
+# print(res)
 
 print("######################################################")
 ####################################################
@@ -164,7 +151,7 @@ my_str = "My_long str", l_limit = "o", r_limit = "t" -> sub_str = "ng s"'''
 my_str = "My_long str"
 
 sub_str = my_str[5:9]
-print(sub_str)
+# print(sub_str)
 
 
 
