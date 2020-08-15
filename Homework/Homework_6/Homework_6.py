@@ -40,13 +40,30 @@ new_my_list = a + b
 print(new_my_list)
 
 #######################################################################
-'''
+'''                                 +
 2. Дан список строк my_list. Создать новый список в который поместить
 элементы из my_list у которых первый символ - буква "a".
 '''
 #######################################################################
 
-# my_list = ["baasasdasfaw", "askasknfmncxnb.a\e", "asfasfcxxczzzzz1`1112", "sasfadasf", "eet2344", "asdvxczzasfa", "asa","a1", "s1", "b1", "b2", "basd21", "as22211sv!", "a_a", "as1", "_a", "aaa2222"]
+my_list_1 = ["123", "ab", "ba", "assay", "safas21", "1asasasads", "axxxxxaaaaaa"]
+a = "a"
+########
+val_box_global = []
+########
+
+list_for_a = val_box_global.copy()
+
+for val_box_local_1for in my_list_1:
+    if val_box_local_1for[0] in a:
+        value_box_local_1for = list(val_box_local_1for)
+        list_for_a.append(val_box_local_1for)
+        #
+    else:
+         pass
+
+
+print(f"первый символ - буква a :::>> {list_for_a}")
 
 
 #######################################################################
@@ -56,40 +73,27 @@ print(new_my_list)
 '''
 #######################################################################
 
-
-# my_list = '12as12', 'as12sa', 'sa12sa', 'a12a', '122ssss'
-# sub = 'a'
+# '''________________________________________________________________________________________________________'''
+# my_list_2 = ["123", "ba44444444", "ba", "assay", "44444xa88888", "safas21", "1asasasads", "xxxxxaaaaaa"]
+# a = "a"
 #
-# next((s for s in my_list if sub in s), None) # returns 'a'
-# my_list = list(my_list)
-# print(f"1 Проверка: {my_list} + {type(my_list)}")
+# idx_for_global_1 = []
+# items_for_global_1 = []
+# list_for_a = []
+# '''--------------------------------------------------------------------------------------------------------'''
 #
-# idx = len(my_list)
+# for idx_for_local_1, items_for_local_1 in enumerate (my_list_2):
+#     idx_for_global_1.append(idx_for_local_1)
+#     items_for_global_1.append(items_for_local_1)
+#     list_for_a = list(list_for_a)
 #
-# while idx >= 0:
-#     idx -= idx
+#     if idx_for_local_1 [items_for_global_1]:
+#         idx_for_global_1 = idx_for_local_1
+#         print(idx_for_global_1)
+# print(f"произвольное положение - буква a :::>> {list_for_a.index()}")
 #
-#
-#
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# print(f"idx_for_global :::>> {idx_for_global_1}")
+# print(f"items_for_global a :::>> {items_for_global_1}")
 
 #######################################################################
 '''
@@ -134,10 +138,38 @@ print(res)
 '''
 #######################################################################
 
-my_str_1 = "dfgvbhnjmkk,./852611as4548654a21448641864564seasd213231321151!!!56"
-my_str_2 = "dfgvbhnjmkk,.asassd55454541231212312afdsanjhasd41864564se56!"
-sum_my_str = my_str_1 + my_str_2
-print(set(sum_my_str))
+my_str_1 = "12345aa"
+my_str_2 = "12345aa"
+buf_1 = []
+buf_2 = []
+re_res = buf_1 + buf_2
+res = []
+res.append(re_res)
+i_count = 0
+
+
+# str_sum = set(my_str_1 + my_str_2)
+
+
+if len(my_str_1) == len(my_str_2):
+
+    for msi_1, mst_1 in enumerate(my_str_1):
+        mst_1 = str(mst_1)
+        buf_1 = mst_1
+
+        for msi_2, mst_2 in enumerate (my_str_1):
+            mst_2 = str (mst_2)
+            buf_2 = mst_2
+
+
+for i in buf_1:
+    print(i)
+    # for i in buf_2:
+    #     mst_2[i]
+
+print(buf_1 + buf_2)
+# print(set(my_str_1 + my_str_2))
+
 
 
 #######################################################################
