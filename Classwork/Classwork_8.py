@@ -1,7 +1,6 @@
 
 
 
-
 '''                                            Занятие 8.
 Функции (аргументы, значения), assert и простейшие тесты, модули os, typing, sys.'''
 ##########################################################################################################################
@@ -41,8 +40,9 @@ area_a_b_c = get_area_gerone(point_A, point_B, point_C)
 
 print(area_a_b_c)
 
-assert abs(get_area_gerone((0, 0), (0, 4), (3, 0)) - 6.0) >= 0.01
-print(area_a_b_c)
+if __name__ == "__main__":
+    assert abs(get_area_gerone((0, 0), (0, 4), (3, 0)) - 6.0) < 0.01
+    print(area_a_b_c)
 
 
 

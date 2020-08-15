@@ -1,6 +1,7 @@
 
 '''"1. Дано целое число (int). Определить сколько нулей в этом числе.'''
 #####################################################
+from typing import List, Any
 
 numb = 1021284010000000122310355653043015134
 
@@ -17,11 +18,24 @@ print("######################################################")
 
 numb_int = 10203000
 numb_str = str(numb_int)
-a = []
-for idx, value in enumerate(numb_str):
-    a.append(value)
-    a[
-print(f" TASK 2 {a}")
+numb_str = numb_str[::-1]
+a_str = []
+idx_base = []
+value_base = []
+count = 0
+res = []
+
+
+for it, v in enumerate(numb_str):
+    idx_base.append(v)
+    for i in idx_base[i]:
+        idx_base[it] > "0":
+
+
+
+
+print(f" TASK 2 VALUE {idx_base}")
+print(f" TASK 2  ID {value_base}")
 
 
 ####################################################
