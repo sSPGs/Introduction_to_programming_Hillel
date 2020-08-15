@@ -1,8 +1,4 @@
 
-
-#1
-
-
 '''"1. Дано целое число (int). Определить сколько нулей в этом числе.'''
 #####################################################
 
@@ -19,25 +15,14 @@ print("######################################################")
 '''2. Дано целое число (int). Определить сколько нулей в конце этого числа.'''
 ####################################################
 
-# numb_int = 10203000
-# numb_str = str(numb_int)
-#
-# # numb_str = numb_str[::-1]
-#
-# len_numb_str = len(numb_str)
-# idx_len_numb_str = len_numb_str - 1
-# count_numb_str = 0
-# print(numb_str)
-#
-# # while idx_len_numb_str >= 0:
-# #     idx_len_numb_str -= idx_len_numb_str
-#     if numb_str[idx_len_numb_str] == '0':
-#         numb_str.count('0')
-#         print(numb_str)
-#     else:
-#         break
-#
-# print(numb_str.count('0'))
+numb_int = 10203000
+numb_str = str(numb_int)
+a = []
+for idx, value in enumerate(numb_str):
+    a.append(value)
+    a[
+print(f" TASK 2 {a}")
+
 
 ####################################################
 
