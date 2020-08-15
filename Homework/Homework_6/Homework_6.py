@@ -7,37 +7,37 @@
 Задание сделать с использованием enumerate.'''
 #######################################################################
 
-# my_list = ["5 Horse", 123, 5135, 3624, "13 _ 153", 135]
-#
-# new_my_list = []
-# new_my_list_Ne4et = []
-# box_ne4 = []
-#
-#
-# for ind, val in enumerate(my_list):
-#     if ind % 2:
-#         pass
-#         if type(val) == int:
-#
-#             val = str(val)
-#             new_my_list_Ne4et.append(val)
-#             ne4 = new_my_list_Ne4et
-#
-#         else:
-#             pass
-#     else:
-#         new_my_list.append(val)
-#
-# for ind_ne4, val_ne4 in enumerate(new_my_list_Ne4et):
-#     val_ne4 = val_ne4[::-1]
-#     box_ne4.append(val_ne4)
-#     # print(f"ТИП VAL_NE4:::> {type(val_ne4)},{val_ne4}")
-#     for i, val in enumerate(val_ne4):
-#         val = list(val)
-# a = new_my_list
-# b = box_ne4
-# new_my_list = a + b
-# print(new_my_list)
+my_list = ["5 Horse", 123, 5135, 3624, "13 _ 153", 135]
+
+new_my_list = []
+new_my_list_Ne4et = []
+box_ne4 = []
+
+
+for ind, val in enumerate(my_list):
+    if ind % 2:
+        pass
+        if type(val) == int:
+
+            val = str(val)
+            new_my_list_Ne4et.append(val)
+            ne4 = new_my_list_Ne4et
+
+        else:
+            pass
+    else:
+        new_my_list.append(val)
+
+for ind_ne4, val_ne4 in enumerate(new_my_list_Ne4et):
+    val_ne4 = val_ne4[::-1]
+    box_ne4.append(val_ne4)
+    # print(f"ТИП VAL_NE4:::> {type(val_ne4)},{val_ne4}")
+    for i, val in enumerate(val_ne4):
+        val = list(val)
+a = new_my_list
+b = box_ne4
+new_my_list = a + b
+print(new_my_list)
 
 #######################################################################
 '''
@@ -108,14 +108,14 @@ else:
 Создать новый список в который поместить только строки из my_list.
 '''
 #######################################################################
-# my_list_int_and_str = [121, 'fjkjk', 3321, '300dsfgsd']
-# my_list_only_str = []
-#
-# for key, val in enumerate(my_list_int_and_str):
-#     if type(val) == str:
-#         my_list_only_str.append(val)
-#
-# print(my_list_only_str)
+my_list_int_and_str = [121, 'fjkjk', 3321, '300dsfgsd']
+my_list_only_str = []
+
+for key, val in enumerate(my_list_int_and_str):
+    if type(val) == str:
+        my_list_only_str.append(val)
+
+print(my_list_only_str)
 
 #######################################################################
 '''                          +
@@ -123,10 +123,10 @@ else:
 '''
 #######################################################################
 
-# my_str = 'qwevrtasdfqbwertasdf324'
-# set_mystr = set(my_str)
-# res = ''.join([i for i in set_mystr if my_str.count(i) == 1])
-# print(res)
+my_str = 'qwevrtasdfqbwertasdf324'
+set_mystr = set(my_str)
+res = ''.join([i for i in set_mystr if my_str.count(i) == 1])
+print(res)
 
 #######################################################################
 '''                                  +
@@ -134,10 +134,10 @@ else:
 '''
 #######################################################################
 
-# my_str_1 = "dfgvbhnjmkk,./852611as4548654a21448641864564seasd213231321151!!!56"
-# my_str_2 = "dfgvbhnjmkk,.asassd55454541231212312afdsanjhasd41864564se56!"
-# sum_my_str = my_str_1 + my_str_2
-# print(set(sum_my_str))
+my_str_1 = "dfgvbhnjmkk,./852611as4548654a21448641864564seasd213231321151!!!56"
+my_str_2 = "dfgvbhnjmkk,.asassd55454541231212312afdsanjhasd41864564se56!"
+sum_my_str = my_str_1 + my_str_2
+print(set(sum_my_str))
 
 
 #######################################################################
@@ -167,23 +167,24 @@ print(set(s1.split() and set(s2.split())))
 '''
 #######################################################################
 
-# person = {"Фамилия": "Гречуха",
-#           "Имя": "Владимир",
-#           "Возраст": 27,
-#           "Проживание": {
-#               "Страна": "Украина",
-#               "Город": "Днепр",
-#               "Улица": "Владимира Антоновича",
-#           },
-#           "Работа": {
-#               "Наличие": "Да",
-#               "Должность": "Инженер компьютерных систем"
-#           }
-#           }
-#
-# print(person)
+person = {"Фамилия": "Гречуха",
+          "Имя": "Владимир",
+          "Возраст": 27,
+          "Проживание": {
+              "Страна": "Украина",
+              "Город": "Днепр",
+              "Улица": "Владимира Антоновича",
+          },
+          "Работа": {
+              "Наличие": "Да",
+              "Должность": "Инженер компьютерных систем"
+          }
+          }
+
+print(person)
 
 #######################################################################
+
 '''                                          +
 9. Описать с помощью словаря следующую структуру (рецепт ненастоящего торта, придумать и указать граммы для продуктов):
 Составляющие
@@ -205,25 +206,25 @@ print(set(s1.split() and set(s2.split())))
 #######################################################################
 
 
-# dict_tort = {"Коржи": {
-#     "Мука": 12,
-#     "Молоко": 12,
-#     "Масло": 12312,
-#     "Яйцо": 121312,
-# },
-#     "Крем": {
-#         "Сахар": 12,
-#         "Масло": 12,
-#         "Ваниль": 12312,
-#         "Сметана": 121312,
-#     },
-#     "Глазурь": {
-#         "Какао": 12,
-#         "Сахар": 12,
-#         "Масло": 12312,
-#     }
-# }
-#
-# print(dict_tort)
+dict_tort = {"Коржи": {
+    "Мука": 12,
+    "Молоко": 12,
+    "Масло": 12312,
+    "Яйцо": 121312,
+},
+    "Крем": {
+        "Сахар": 12,
+        "Масло": 12,
+        "Ваниль": 12312,
+        "Сметана": 121312,
+    },
+    "Глазурь": {
+        "Какао": 12,
+        "Сахар": 12,
+        "Масло": 12312,
+    }
+}
+
+print(dict_tort)
 
 #######################################################################
