@@ -128,41 +128,62 @@ print("######################################################")
   Примеры: 'abcd' -> ['ab', 'cd'], 'abc' -> ['ab', 'c_']'''
 ####################################################
 
+###---------------------------------------------###
 my_str = 'abcd'
 my_str = list(my_str)
-box_r = []
-box_l = []
+box_srez_r = []
+box_srez_l = []
+left = ''
+right = ''
+left_temp = []
+right_temp = []
 
-l_item = my_str.copy()
-box_l.extend(l_item[0:int(len(l_item)) // 2])
-box_l = box_l[0:int(len(my_str))]
 
-r_item = my_str.copy()
-r_item = r_item[::-1]
-box_r.extend(r_item[0:int(len(r_item)) // 2])
-box_r = box_r[0:int(len(my_str))]
-ln_box_ln = int(len(box_r))
-
-str_box_r = []
-str_box_r = box_r.copy()
+###---------------------------------------------###
+total_item = my_str.copy()
+box_srez_l.extend(total_item[0:int(len(total_item)) // 2])
+# box_srez_l = box_srez_l[0:int(len(my_str))]
+# r_item = total_item.copy()
+l_str = int(len(my_str))
+###---------------------------------------------###
+str_box_r = total_item.copy()
 str_box_r = str_box_r[::-1]
-res_str = f"{box_l} {str_box_r}"
+box_srez_r.extend(str_box_r[0:int(len(total_item)) // 2])
+box_srez_r = box_srez_r[0:int(len(my_str))][::-1]
+###---------------------------------------------###
 
-for i_str in box_r:
-    count = 0
+left = str(box_srez_l)
+cnt_left = 0
+
+for i_left in left: # i_left _>перебор всех символов из left
+    if i_left >= 'a' and i_left <= 'z':
+        left_temp.extend(i_left)
+
+left_temp = left_temp[cnt_left] + left_temp[cnt_left + 1]
+print(f"I_LEFT_PRINT = {left_temp}")
+
+right = str(box_srez_r)
+
+c_r = 0
+for i_right in right: # i_left _>перебор всех символов из left
+    if i_right >= 'a' and i_right <= 'z':
+
+        right_temp.extend(i_right)
+        pass
 
 
 
 
-while count <= ln_box_ln:
-    count += 1
-    box_r = str(ln_box_ln)
-    print(ln_box_ln[count])
+right_temp = right_temp[c_r] + right_temp[c_r + 1]
+print(f"I_RIGHT_PRINT = {right_temp}")
 
 
-# print(f"r_item {box_r}")
-# print(f"l_item {box_l}")
-print(f"res_str{res_str}")
+
+
+print(f"srez_r {box_srez_r} Right {right}  ")
+print(f"srez_l {box_srez_l} Left {left} ")
+# print(f"res_str{res_str}")
+
 ####################################################
 
 

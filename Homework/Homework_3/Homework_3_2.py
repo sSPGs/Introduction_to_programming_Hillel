@@ -5,7 +5,7 @@
 value = int(input("1 ) если value меньше 100, то new_value равно половине значения value, в противном случае - противоположне value число"))
 
 # new_value = value / 2 if value < 100 else (value \ 2# )
-new_value = print(value /2) if value < 100 else print(f"-{value / 2}")
+new_value = print(value / 2) if value < 100 else print(f"-{value / 2}")
 print(new_value)
 
 #####################################################
