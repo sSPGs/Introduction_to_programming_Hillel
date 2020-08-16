@@ -139,7 +139,7 @@ l_item = my_str.copy()
 box_l.extend(l_item)
 box_l = box_l[0:2]
 
-r_item = my_str.copy()[len_str // 2:len_str]
+r_item = my_str.copy()[int(len(box_l)):]
 box_r.extend(r_item)
 len_r_item = int(len(r_item))
 
