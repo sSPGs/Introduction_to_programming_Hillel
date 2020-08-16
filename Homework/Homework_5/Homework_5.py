@@ -1,14 +1,14 @@
 '''"1. Дано целое число (int). Определить сколько нулей в этом числе.'''
 #####################################################
-from typing import List, Any
+from typing import List , Any
 
 numb = 1021284010000000122310355653043015134
 
-sum_numb = str(numb)
-sum_total = sum_numb.count("0")
+sum_numb = str (numb)
+sum_total = sum_numb.count ("0")
 
 # print(f'В числе {numb}\nКол-во НУЛЕЙ: {sum_total}')
-print("######################################################")
+print ("######################################################")
 
 ####################################################
 
@@ -16,19 +16,19 @@ print("######################################################")
 ####################################################
 
 numb_int = 102030000000000000
-numb_str = str(numb_int)
-numb_str = numb_str [::-1]
+numb_str = str (numb_int)
+numb_str = numb_str[::-1]
 i_str_global = []
 # i_str_global = int(i_str_global)
 cnt = 0
 
-for i_str in numb_str [cnt::]:
+for i_str in numb_str[cnt::]:
     if i_str == "0":
-        i_str_global.append(i_str)
+        i_str_global.append (i_str)
     else:
         break
 
-result = i_str_global.count("0")
+result = i_str_global.count ("0")
 
 # print(f'В конце числа <<:{numb_int}:>>,  НУЛЕЙ {result}')
 
@@ -39,17 +39,17 @@ result = i_str_global.count("0")
 из my_list_1 и потом нечетные элементы из my_list_2.'''
 ####################################################
 
-my_list_1 = [2, 6, 112, 12, 113, 1235]
-my_list_2 = [5, 121, 5135, 3624, 13153, 135]
+my_list_1 = [2 , 6 , 112 , 12 , 113 , 1235]
+my_list_2 = [5 , 121 , 5135 , 3624 , 13153 , 135]
 my_result = []
 
-for idx, val in enumerate(my_list_1):
+for idx , val in enumerate (my_list_1):
     if not val % 2:
-        my_result.append(val)
+        my_result.append (val)
 
-for idx, val in enumerate(my_list_2):
+for idx , val in enumerate (my_list_2):
     if val % 2:
-        my_result.append(val)
+        my_result.append (val)
 
 # print(my_result)
 
@@ -60,11 +60,11 @@ for idx, val in enumerate(my_list_2):
 Если my_list [1,2,3,4], то new_list [2,3,4,1]'''
 ####################################################
 
-my_list = [1, 2, 3, 4]
-new_list = my_list.copy()
-new_list.append(new_list.pop(0))
+my_list = [1 , 2 , 3 , 4]
+new_list = my_list.copy ()
+new_list.append (new_list.pop (0))
 # print(new_list)
-print("######################################################")
+print ("######################################################")
 
 ####################################################
 
@@ -73,9 +73,9 @@ print("######################################################")
 
 ####################################################
 
-my_list = [1, 2, 3, 4]
+my_list = [1 , 2 , 3 , 4]
 new_list = my_list
-new_list.append(new_list.pop(0))
+new_list.append (new_list.pop (0))
 # print(new_list)
 
 
@@ -87,39 +87,39 @@ new_list.append(new_list.pop(0))
 ####################################################
 
 my_str = "43 больше чем 34, но меньше чем 56"
-my_str.split()
+my_str.split ()
 box_int = []
 
 '''Цикл for iter_str_and_int in my_str:  '''
 for iter_str_and_int in my_str:
     if iter_str_and_int in "1234567890":
-        iter_str_and_int = int(iter_str_and_int)
-        box_int.append((iter_str_and_int))  ## Выбераем из строки  цифры и помещаем в список box_int
+        iter_str_and_int = int (iter_str_and_int)
+        box_int.append ((iter_str_and_int))  ## Выбераем из строки  цифры и помещаем в список box_int
     else:
         pass
 
-a, b = box_int [0], box_int [1]
-a = str(a)
-b = str(b)
+a , b = box_int[0] , box_int[1]
+a = str (a)
+b = str (b)
 ab = a + b
-ab = int(ab)
+ab = int (ab)
 
-c, d = box_int [2], box_int [3]
-c = str(c)
-d = str(d)
+c , d = box_int[2] , box_int[3]
+c = str (c)
+d = str (d)
 cd = c + d
-cd = int(cd)
+cd = int (cd)
 
-e, f = box_int [4], box_int [5]
-e = str(e)
-f = str(f)
+e , f = box_int[4] , box_int[5]
+e = str (e)
+f = str (f)
 ef = e + f
-ef = int(ef)
+ef = int (ef)
 
 res = (ab + cd + ef)
 # print(res)
 
-print("######################################################")
+print ("######################################################")
 ####################################################
 
 
@@ -128,62 +128,61 @@ print("######################################################")
   Примеры: 'abcd' -> ['ab', 'cd'], 'abc' -> ['ab', 'c_']'''
 ####################################################
 
-###---------------------------------------------###
+###---------------------------------------------###>
+
 my_str = 'abcd'
+box = []
 my_str = list(my_str)
 box_srez_r = []
+box_srez_r.extend(my_str.copy()[0:2])
 box_srez_l = []
-left = ''
-right = ''
-left_temp = []
-right_temp = []
+box_srez_l.extend(my_str.copy()[2:4])
+
+#     box_srez_r[1] = "_"
+# # i_len_srez_l = int(len(box_srez_l))
+
+if not int(len(box_srez_l)) % 2 == 0:
+    box_srez_l[1] = "_"
+else:
+    pass
+
+box.append(str(box_srez_r + box_srez_l[0] + box_srez_l[1]))
 
 
-###---------------------------------------------###
-total_item = my_str.copy()
-box_srez_l.extend(total_item[0:int(len(total_item)) // 2])
-# box_srez_l = box_srez_l[0:int(len(my_str))]
-# r_item = total_item.copy()
-l_str = int(len(my_str))
-###---------------------------------------------###
-str_box_r = total_item.copy()
-str_box_r = str_box_r[::-1]
-box_srez_r.extend(str_box_r[0:int(len(total_item)) // 2])
-box_srez_r = box_srez_r[0:int(len(my_str))][::-1]
-###---------------------------------------------###
-
-left = str(box_srez_l)
-cnt_left = 0
-
-for i_left in left: # i_left _>перебор всех символов из left
-    if i_left >= 'a' and i_left <= 'z':
-        left_temp.extend(i_left)
-
-left_temp = left_temp[cnt_left] + left_temp[cnt_left + 1]
-print(f"I_LEFT_PRINT = {left_temp}")
-
-right = str(box_srez_r)
-
-c_r = 0
-for i_right in right: # i_left _>перебор всех символов из left
-    if i_right >= 'a' and i_right <= 'z':
-
-        right_temp.extend(i_right)
-        pass
+print(box)
 
 
-
-
-right_temp = right_temp[c_r] + right_temp[c_r + 1]
-print(f"I_RIGHT_PRINT = {right_temp}")
-
-
-
-
-print(f"srez_r {box_srez_r} Right {right}  ")
-print(f"srez_l {box_srez_l} Left {left} ")
-# print(f"res_str{res_str}")
-
+# ###---------------------------------------------###>
+#
+# total_item = my_str.copy ()
+# box_srez_l.extend(total_item[0:int(len (total_item)) // 2])
+# l_str = int (len (my_str))
+#
+# ###---------------------------------------------###>
+#
+# str_box_r = total_item.copy ()
+# str_box_r = str_box_r[::-1]
+# box_srez_r.extend(str_box_r[0:int(len (total_item)) // 2])
+# box_srez_r = box_srez_r[0:int(len(my_str))][::-1]
+#
+# ###---------------------------------------------###>
+#
+# left = str(box_srez_l)
+# cnt_left = 0
+# for i_left in left:  # i_left _>перебор всех символов из left
+#     if i_left >= 'a' and i_left <= 'z':
+#         left_temp.extend(i_left)
+# left_temp = left_temp[cnt_left] + left_temp[cnt_left + 1]
+#
+# right = str(box_srez_r)
+# cnt_right = 0
+# for i_right in right:  # i_left _>перебор всех символов из left
+#     if i_right >= 'a' and i_right <= 'z':
+#         right_temp.extend(i_right)
+#
+#
+# result = f"['{left_temp}', '{right_temp[0]}{right_temp[1]}']"
+# print(result)
 ####################################################
 
 
@@ -195,7 +194,7 @@ my_str = "My_long str", l_limit = "o", r_limit = "t" -> sub_str = "ng s"'''
 
 my_str = "My_long str"
 
-sub_str = my_str [5:9]
+sub_str = my_str[5:9]
 # print(sub_str)
 
 
