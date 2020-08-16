@@ -128,24 +128,40 @@ print("######################################################")
   Примеры: 'abcd' -> ['ab', 'cd'], 'abc' -> ['ab', 'c_']'''
 ####################################################
 
-my_str = 'abc'
+my_str = 'abcd'
 my_str = list(my_str)
 box_r = []
 box_l = []
-len_str = len(my_str)
-my_str = list(my_str)
 
 l_item = my_str.copy()
-box_l.extend(l_item)
-box_l = box_l[0:2]
+box_l.extend(l_item[0:int(len(l_item)) // 2])
+box_l = box_l[0:int(len(my_str))]
 
-r_item = my_str.copy()[int(len(box_l)):]
-box_r.extend(r_item)
-len_r_item = int(len(r_item))
+r_item = my_str.copy()
+r_item = r_item[::-1]
+box_r.extend(r_item[0:int(len(r_item)) // 2])
+box_r = box_r[0:int(len(my_str))]
+ln_box_ln = int(len(box_r))
 
-res_str = f"{box_l} {box_r}"
-print(f"r_item {box_r}")
-print(f"l_item {box_l}")
+str_box_r = []
+str_box_r = box_r.copy()
+str_box_r = str_box_r[::-1]
+res_str = f"{box_l} {str_box_r}"
+
+for i_str in box_r:
+    count = 0
+
+
+
+
+while count <= ln_box_ln:
+    count += 1
+    box_r = str(ln_box_ln)
+    print(ln_box_ln[count])
+
+
+# print(f"r_item {box_r}")
+# print(f"l_item {box_l}")
 print(f"res_str{res_str}")
 ####################################################
 
