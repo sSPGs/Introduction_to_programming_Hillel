@@ -1,6 +1,6 @@
-
 '''"1. Дано целое число (int). Определить сколько нулей в этом числе.'''
 #####################################################
+from typing import List, Any
 
 numb = 1021284010000000122310355653043015134
 
@@ -17,12 +17,12 @@ print("######################################################")
 
 numb_int = 102030000000000000
 numb_str = str(numb_int)
-numb_str = numb_str[::-1]
+numb_str = numb_str [::-1]
 i_str_global = []
 # i_str_global = int(i_str_global)
 cnt = 0
 
-for i_str in numb_str[cnt::]:
+for i_str in numb_str [cnt::]:
     if i_str == "0":
         i_str_global.append(i_str)
     else:
@@ -31,7 +31,6 @@ for i_str in numb_str[cnt::]:
 result = i_str_global.count("0")
 
 # print(f'В конце числа <<:{numb_int}:>>,  НУЛЕЙ {result}')
-
 
 
 ####################################################
@@ -55,7 +54,6 @@ for idx, val in enumerate(my_list_2):
 # print(my_result)
 
 #         ####################################################
-
 
 
 '''4.Дан список my_list. Создать список new_list у которого первый элемент из my_list стоит на последнем месте.
@@ -96,23 +94,23 @@ box_int = []
 for iter_str_and_int in my_str:
     if iter_str_and_int in "1234567890":
         iter_str_and_int = int(iter_str_and_int)
-        box_int.append((iter_str_and_int)) ## Выбераем из строки  цифры и помещаем в список box_int
+        box_int.append((iter_str_and_int))  ## Выбераем из строки  цифры и помещаем в список box_int
     else:
         pass
 
-a, b = box_int[0], box_int[1]
+a, b = box_int [0], box_int [1]
 a = str(a)
 b = str(b)
-ab = a+b
+ab = a + b
 ab = int(ab)
 
-c, d = box_int[2], box_int[3]
+c, d = box_int [2], box_int [3]
 c = str(c)
 d = str(d)
-cd = c+d
+cd = c + d
 cd = int(cd)
 
-e, f = box_int[4], box_int[5]
+e, f = box_int [4], box_int [5]
 e = str(e)
 f = str(f)
 ef = e + f
@@ -130,15 +128,39 @@ print("######################################################")
   Примеры: 'abcd' -> ['ab', 'cd'], 'abc' -> ['ab', 'c_']'''
 ####################################################
 
+my_str = 'abc'
+len_str = len(my_str)
+my_str = list(my_str)
+
+r_item = my_str.copy()[0:len_str // 2]
+
+l_item = my_str.copy()[len(r_item):len_str]
+count = 0
+
+while count <= 0:
+    count += 1
+    if len(l_item) % 2:
+        l_item[0] += 1
+# else:
+#     l_item = l_item[1] = "_"
+
+for i_str_r in my_str:
+    if len(i_str_r) % 2:
+        len_r_item = int(len(r_item))
+        len_l_item = int(len(l_item))
+        len_source = int(len(my_str))
+        l_item = my_str[len_source - len_r_item: len_source]
+
+    else:
+        len(l_item) % 2
+        l_item[0] += 1
+        l_item[1] = "_"
 
 
-
-
-
-
-
-
-
+res_str = f"{r_item}  {l_item}"
+print(f"r_item {r_item}")
+print(f"l_item {l_item}")
+print(f"res_str{res_str}")
 ####################################################
 
 
@@ -150,13 +172,11 @@ my_str = "My_long str", l_limit = "o", r_limit = "t" -> sub_str = "ng s"'''
 
 my_str = "My_long str"
 
-sub_str = my_str[5:9]
+sub_str = my_str [5:9]
 # print(sub_str)
 
 
-
 ####################################################
-
 
 
 '''9. Дана строка my_str в которой символы МОГУТ повторяться и два символа l_limit, r_limit, которые точно находятся в этой строке. 
@@ -165,30 +185,12 @@ my_str = "My long string", l_limit = "o", r_limit = "g" -> sub_str = "ng strin".
 ####################################################
 
 
-
-
-
-
-
-
 ####################################################
 
 '''10. Дан список чисел. Определите, сколько в этом списке элементов, которые больше двух своих соседей (слева и справа),и выведите количество таких элементов. 
 Крайние элементы списка никогда не учитываются, поскольку у них недостаточно соседей.
  Для списка [2,4,1,5,3,9,0,7] ответом будет 3 потому что 4 > 2+1, 5 > 1+3, 9>3+0.'''
 ####################################################
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ####################################################
