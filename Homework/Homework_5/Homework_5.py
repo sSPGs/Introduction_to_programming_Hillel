@@ -129,37 +129,25 @@ print("######################################################")
 ####################################################
 
 my_str = 'abc'
+my_str = list(my_str)
+box_r = []
+box_l = []
 len_str = len(my_str)
 my_str = list(my_str)
 
-r_item = my_str.copy()[0:len_str // 2]
+l_item = my_str.copy()
+box_l.extend(l_item)
+box_l = box_l[0:2]
 
-l_item = my_str.copy()[len(r_item):len_str]
-count = 0
-
-while count <= 0:
-    count += 1
-    if len(l_item) % 2:
-        l_item[0] += 1
-# else:
-#     l_item = l_item[1] = "_"
-
-for i_str_r in my_str:
-    if len(i_str_r) % 2:
-        len_r_item = int(len(r_item))
-        len_l_item = int(len(l_item))
-        len_source = int(len(my_str))
-        l_item = my_str[len_source - len_r_item: len_source]
-
-    else:
-        len(l_item) % 2
-        l_item[0] += 1
-        l_item[1] = "_"
+r_item = my_str.copy()[len_str // 2:len_str]
+box_r.extend(r_item)
+len_r_item = int(len(r_item))
 
 
-res_str = f"{r_item}  {l_item}"
-print(f"r_item {r_item}")
-print(f"l_item {l_item}")
+
+res_str = f"{box_l} {box_r}"
+print(f"r_item {box_r}")
+print(f"l_item {box_l}")
 print(f"res_str{res_str}")
 ####################################################
 
