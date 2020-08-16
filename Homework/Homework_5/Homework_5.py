@@ -143,8 +143,6 @@ r_item = my_str.copy()[len_str // 2:len_str]
 box_r.extend(r_item)
 len_r_item = int(len(r_item))
 
-
-
 res_str = f"{box_l} {box_r}"
 print(f"r_item {box_r}")
 print(f"l_item {box_l}")
