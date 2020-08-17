@@ -1,3 +1,4 @@
+
 '''                            +
 1. Дан список строк my_list. Создать новый список в который поместить
 элементы из my_list по следующему правилу:
@@ -7,65 +8,37 @@
 Задание сделать с использованием enumerate.'''
 #######################################################################
 
-my_list = ["5 Horse", 123, 5135, 3624, "13 _ 153", 135]
+my_list = ["5 Horse", '123', '5135', '3624', "13_153", '135']
 
-new_my_list = []
-new_my_list_Ne4et = []
-box_ne4 = []
+new_my_list = my_list.copy()
+cnt = int(len(new_my_list))
+
+# while cnt >= 0:
+#     cnt -= 1
+#     print("fff")
+#
 
 
-for ind, val in enumerate(my_list):
-    if ind % 2:
-        pass
-        if type(val) == int:
 
-            val = str(val)
-            new_my_list_Ne4et.append(val)
-            ne4 = new_my_list_Ne4et
 
-        else:
-            pass
-    else:
-        new_my_list.append(val)
-
-for ind_ne4, val_ne4 in enumerate(new_my_list_Ne4et):
-    val_ne4 = val_ne4[::-1]
-    box_ne4.append(val_ne4)
-    # print(f"ТИП VAL_NE4:::> {type(val_ne4)},{val_ne4}")
-    for i, val in enumerate(val_ne4):
-        val = list(val)
-a = new_my_list
-b = box_ne4
-new_my_list = a + b
-print(new_my_list)
 
 #######################################################################
-'''                                 +
+'''
 2. Дан список строк my_list. Создать новый список в который поместить
 элементы из my_list у которых первый символ - буква "a".
 '''
 #######################################################################
 
-my_list_1 = ["123", "ab", "ba", "assay", "safas21", "1asasasads", "axxxxxaaaaaa"]
-a = "a"
-########
-val_box_global = []
-########
+my_list = ["12as12", "as12sa", "sa12sa", "a12a", "12hfdf", "122ssss"]
 
-list_for_a = val_box_global.copy()
-
-for val_box_local_1for in my_list_1:
-    if val_box_local_1for[0] in a:
-        value_box_local_1for = list(val_box_local_1for)
-        list_for_a.append(val_box_local_1for)
-        #
-    else:
-         pass
-
-
-print(f"первый символ - буква a :::>> {list_for_a}")
-
-
+new_my_list = my_list.copy()
+a_list = []
+count = 0
+# for i_m_list in new_my_list[count]:
+#     if i_m_list in my_list[i_m_list]:
+#        a_list.append(i_m_list)
+#        a_list = i_m_list
+# print(f"TASK 2:::> {a_list}")
 #######################################################################
 '''
 3. Дан список строк my_list. Создать новый список в который поместить
@@ -73,27 +46,19 @@ print(f"первый символ - буква a :::>> {list_for_a}")
 '''
 #######################################################################
 
-# '''________________________________________________________________________________________________________'''
-# my_list_2 = ["123", "ba44444444", "ba", "assay", "44444xa88888", "safas21", "1asasasads", "xxxxxaaaaaa"]
-# a = "a"
-#
-# idx_for_global_1 = []
-# items_for_global_1 = []
-# list_for_a = []
-# '''--------------------------------------------------------------------------------------------------------'''
-#
-# for idx_for_local_1, items_for_local_1 in enumerate (my_list_2):
-#     idx_for_global_1.append(idx_for_local_1)
-#     items_for_global_1.append(items_for_local_1)
-#     list_for_a = list(list_for_a)
-#
-#     if idx_for_local_1 [items_for_global_1]:
-#         idx_for_global_1 = idx_for_local_1
-#         print(idx_for_global_1)
-# print(f"произвольное положение - буква a :::>> {list_for_a.index()}")
-#
-# print(f"idx_for_global :::>> {idx_for_global_1}")
-# print(f"items_for_global a :::>> {items_for_global_1}")
+my_list = ["12as12", "as12sa", "sa12sa", "a12a", "12hfdf", "122ssss"]
+a_list = []
+
+
+for key, val in enumerate(my_list):
+    for val_ in 'a':
+        a_list.append(val)
+
+print(f"TASK 3:::> {a_list}")
+
+
+
+
 
 #######################################################################
 '''
@@ -119,7 +84,7 @@ for key, val in enumerate(my_list_int_and_str):
     if type(val) == str:
         my_list_only_str.append(val)
 
-print(my_list_only_str)
+print(f"TASK 4:::> {my_list_only_str}")
 
 #######################################################################
 '''                          +
@@ -130,7 +95,7 @@ print(my_list_only_str)
 my_str = 'qwevrtasdfqbwertasdf324'
 set_mystr = set(my_str)
 res = ''.join([i for i in set_mystr if my_str.count(i) == 1])
-print(res)
+print(f"TASK 5:::> {res}")
 
 #######################################################################
 '''                                  +
@@ -138,51 +103,20 @@ print(res)
 '''
 #######################################################################
 
-my_str_1 = "12345aa"
-my_str_2 = "12345aa"
-buf_1 = []
-buf_2 = []
-re_res = buf_1 + buf_2
-res = []
-res.append(re_res)
-i_count = 0
-
-
-# str_sum = set(my_str_1 + my_str_2)
-
-
-if len(my_str_1) == len(my_str_2):
-
-    for msi_1, mst_1 in enumerate(my_str_1):
-        mst_1 = str(mst_1)
-        buf_1 = mst_1
-
-        for msi_2, mst_2 in enumerate (my_str_1):
-            mst_2 = str (mst_2)
-            buf_2 = mst_2
-
-
-for i in buf_1:
-    print(i)
-    # for i in buf_2:
-    #     mst_2[i]
-
-print(buf_1 + buf_2)
-# print(set(my_str_1 + my_str_2))
-
-
+my_str_1 = "dfgvbhnjmkk,./852611as4548654a21448641864564seasd213231321151!!!56"
+my_str_2 = "dfgvbhnjmkk,.asassd55454541231212312afdsanjhasd41864564se56!"
+sum_my_str = my_str_1 + my_str_2
+# print(set(sum_my_str))
+print(f"TASK 6:::> {set(sum_my_str)}")
 
 #######################################################################
-'''                                 +
+'''
 7. Даны две строки, вывести те символы, которые есть в обеих строках,
 но в каждой только по одному разу.
 '''
 #######################################################################
+print(f"TASK 7:::> 'В ПРОЦЕССЕ")
 
-s1 = 'o11111pppppppptima'
-s2 = 'o1p3t4i5m6a'
-
-print(set(s1.split() and set(s2.split())))
 #######################################################################
 '''                                          +
 8. Описать с помощью словаря следующую структуру для конкретного человека (можно придумать):
@@ -213,10 +147,9 @@ person = {"Фамилия": "Гречуха",
           }
           }
 
-print(person)
+print(f"TASK 8:::> {person}")
 
 #######################################################################
-
 '''                                          +
 9. Описать с помощью словаря следующую структуру (рецепт ненастоящего торта, придумать и указать граммы для продуктов):
 Составляющие
@@ -257,6 +190,6 @@ dict_tort = {"Коржи": {
     }
 }
 
-print(dict_tort)
+print(f"TASK 9:::> {dict_tort}")
 
 #######################################################################
