@@ -11,19 +11,21 @@
 my_list = ["5 Horse", '123', '5135', '3624', "13_153", '135']
 
 new_my_list = my_list.copy()
-cnt = int(len(new_my_list))
+list_to_print = list()
 
-# while cnt >= 0:
-#     cnt -= 1
-#     print("fff")
-#
+for idx_n_list, val_n_list in enumerate(new_my_list):
+    if not idx_n_list % 2:
+        list_to_print.append(my_list[idx_n_list])
+    else:
+        list_to_print.append(my_list[idx_n_list][::-1])
 
 
-
+print(f"TASK 1:::> {list_to_print}")
 
 
 #######################################################################
 '''
+                    +
 2. Дан список строк my_list. Создать новый список в который поместить
 элементы из my_list у которых первый символ - буква "a".
 '''
@@ -32,16 +34,17 @@ cnt = int(len(new_my_list))
 my_list = ["12as12", "as12sa", "sa12sa", "a12a", "12hfdf", "122ssss"]
 
 new_my_list = my_list.copy()
-a_list = []
-count = 0
-# for i_m_list in new_my_list[count]:
-#     if i_m_list in my_list[i_m_list]:
-#        a_list.append(i_m_list)
-#        a_list = i_m_list
-# print(f"TASK 2:::> {a_list}")
+print_list = []
+mod_list = []
+
+for i_val in new_my_list:
+    if i_val[0] == 'a':
+        mod_list.append(i_val)
+
+print(f"TASK 2:::> {mod_list}")
 #######################################################################
 '''  о
-3. Дан список строк my_list. Создать новый список в который поместить
+3. Дан список строк my_list. Создать нвый список в который поместить
 элементы из my_list в которых есть символ - буква "a" на любом месте.
 '''
 #######################################################################
