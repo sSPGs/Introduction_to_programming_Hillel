@@ -130,59 +130,18 @@ print ("######################################################")
 
 ###---------------------------------------------###>
 
-my_str = 'abcd'
-box = []
-my_str = list(my_str)
-box_srez_r = []
-box_srez_r.extend(my_str.copy()[0:2])
-box_srez_l = []
-box_srez_l.extend(my_str.copy()[2:4])
+str_0 = 'abcd'
+s = "_"
+str_0.strip('')
+len_s_0 = int(len(str_0))
+str_1 = f"['{str_0[0:2]}', '{str_0[2:]}']"
+str_2 = f"['{str_0[0:2]}', '{str_0[2:]}_']"
 
-#     box_srez_r[1] = "_"
-# # i_len_srez_l = int(len(box_srez_l))
-
-if not int(len(box_srez_l)) % 2 == 0:
-    box_srez_l[1] = "_"
+if len_s_0 % 2 == 0:
+    print(str_1)
 else:
-    pass
+    print(str_2)
 
-box.append(str(box_srez_r + box_srez_l[0] + box_srez_l[1]))
-
-
-print(box)
-
-
-# ###---------------------------------------------###>
-#
-# total_item = my_str.copy ()
-# box_srez_l.extend(total_item[0:int(len (total_item)) // 2])
-# l_str = int (len (my_str))
-#
-# ###---------------------------------------------###>
-#
-# str_box_r = total_item.copy ()
-# str_box_r = str_box_r[::-1]
-# box_srez_r.extend(str_box_r[0:int(len (total_item)) // 2])
-# box_srez_r = box_srez_r[0:int(len(my_str))][::-1]
-#
-# ###---------------------------------------------###>
-#
-# left = str(box_srez_l)
-# cnt_left = 0
-# for i_left in left:  # i_left _>перебор всех символов из left
-#     if i_left >= 'a' and i_left <= 'z':
-#         left_temp.extend(i_left)
-# left_temp = left_temp[cnt_left] + left_temp[cnt_left + 1]
-#
-# right = str(box_srez_r)
-# cnt_right = 0
-# for i_right in right:  # i_left _>перебор всех символов из left
-#     if i_right >= 'a' and i_right <= 'z':
-#         right_temp.extend(i_right)
-#
-#
-# result = f"['{left_temp}', '{right_temp[0]}{right_temp[1]}']"
-# print(result)
 ####################################################
 
 
