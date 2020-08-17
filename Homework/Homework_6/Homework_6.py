@@ -24,8 +24,7 @@ print(f"TASK 1:::> {list_to_print}")
 
 
 #######################################################################
-'''
-                    +
+'''                           +
 2. Дан список строк my_list. Создать новый список в который поместить
 элементы из my_list у которых первый символ - буква "a".
 '''
@@ -51,13 +50,11 @@ print(f"TASK 2:::> {mod_list}")
 
 my_list = ["12as12", "as12sa", "sa12sa", "a12a", "12hfdf", "122ssss"]
 a_list = []
-
-
-for key, val in enumerate(my_list):
-    for val_ in 'a':
-        a_list.append(val)
-
-print(f"TASK 3:::> {a_list}")
+#
+# for val in my_list[0:]:
+#
+#
+# print(f"TASK 3:::> {a_list.append([val])}")
 
 
 
