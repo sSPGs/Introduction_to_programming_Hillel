@@ -53,7 +53,7 @@
 
 '''1-  создать папку tmp если её нет'''
 import os
-
+import shutil
 def create_folder(path):
     try:
         os.mkdir(path)
@@ -69,9 +69,29 @@ print(alphabet)
 
 '''3-   в папку tmp положить файл alphabet.txt в которой записать этот алфавит'''
 
-def save_file(filename, path, data: str):
+def save_string_to_file(filename, path, data: str):
     filename_with_pass = os.path.join(path, filename)
     with open(filename_with_pass, "w") as file:
         file.write(data)
 
-save_file("alphabet.txt", 'tmp', alphabet)
+save_string_to_file( "alphabet.txt", 'tmp', alphabet )
+
+'''4-   в папку tmp положить файл вида a.txt до z.txt'''
+
+# def create_file(filename, path, data):
+'''5-   случайным образом удалить половину файлов в tmp //2'''
+
+tmp_folder = os.listdir('tmp')
+print(tmp_folder)
+
+
+for file in tmp_folder:
+    os.remove(os.path.join('tmp', file))
+
+
+
+
+
+
+
+
