@@ -33,3 +33,7 @@ with open("test.csv", 'r') as csvfile:
         data.append(row)    # список словарей
 
 print(data)
+
+for row in data:
+
+    print(row["First"], row["Second"],  row["Third"])
