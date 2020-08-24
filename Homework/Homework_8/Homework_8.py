@@ -1,5 +1,7 @@
 import os
-#1
+
+
+# 1
 
 def path_to_path_and_name(path):
     folder_path = os.path.abspath(path)
@@ -9,13 +11,15 @@ def path_to_path_and_name(path):
 
 path_to_path_and_name('C:/temp/doc123.txt')
 
-#2
+
+# 2
 
 def list_dir(path='C:/temp'):
+    for file in list(set(os.listdir(path=path))):
+        filename_with_path = print(os.path.join(path, file))
 
-    dir_list = print(os.listdir(path=path))
+    return filename_with_path
 
-    return dir_list
 
 list_dir()
 
@@ -26,3 +30,11 @@ list_dir()
 path_dict = third_function(path)
 Значение по умолчанию - текущая папка. Т.е. third_function() вернет словарь с файлами и подпапками из текущей папки."""
 
+# def list_dir_dict(path='C:/temp'):
+#
+#     for file in list(set(os.listdir(path=path))):
+#         filename_with_path = print(os.path.join(path, file))
+#
+#     return filename_with_path
+#
+# list_dir_dict()
