@@ -31,14 +31,14 @@ files = second_function(path)
 Значение по умолчанию - текущая папка. Т.е. second_function() вернет файлы из текущей папки."""
 print("###############################################TWO############################################################")
 # 2
-def list_dir(path='C:/temp'):
-    filename_with_path = []
-    for file in os.listdir(path=path):
-        if path in os.path.isfile(file) == 0:
+def list_dir(path='C:/temp/temp'):
+    cnt = int(len((list(os.listdir(path)))))
+    print(cnt)
+    for file in os.walk(path):
+        print(file)
 
-            filename_with_path = print(os.path.join(file))
 
-            return filename_with_path
+
 
 list_dir()
 print("##############################################################################################################")
