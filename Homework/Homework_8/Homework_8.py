@@ -32,10 +32,13 @@ files = second_function(path)
 print("###############################################TWO############################################################")
 # 2
 def list_dir(path='C:/temp/temp'):
-    cnt = int(len((list(os.listdir(path)))))
-    print(cnt)
-    for file in os.walk(path):
-        print(file)
+    files = []
+    for file in os.listdir(path):
+        files.append(file.split(","))
+        for lst_file in file:
+            if lst_file == ".":
+                print(file)
+
 
 
 
