@@ -36,15 +36,11 @@ my_list = ["12as12", "as12sa", "sa12sa", "a12a", "12hfdf", "122ssss"]
 
 val_k = []
 
+
 for key in my_list:
-    cnt = int(len())
-    for val in key[cnt - 1]:
-        cnt += 1
-        print(val)
-
-
-print(val_k)
-
+    if "a" in key:
+        val_k.append(key)
+print(f"TASK 3:::> {val_k}")
 
 
 
