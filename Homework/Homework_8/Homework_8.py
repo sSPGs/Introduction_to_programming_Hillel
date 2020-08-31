@@ -11,13 +11,15 @@ filename, folder_path = first_function(path)"""
 print("#########################################ONE##################################################################")
 
 
-def path_to_path_and_name(path):
-    folder_path = os.path.abspath(path)
-    filename = os.path.basename(path)
-    print(f'Filename is {filename}, Path to file {folder_path}')
+def path_to_path_and_name(path='C:/temp/doc123.txt'):
+    folder_path = os.path.dirname(path)
+    filename = os.path.join(folder_path, os.path.basename(path))
+    return folder_path, filename
 
 
-path_to_path_and_name('C:/temp/doc123.txt')
+filename, folder_path = path_to_path_and_name()
+print(f'ONE:::: >> [Filename is {filename}, Path to file {folder_path}]')
+
 
 print("##############################################################################################################")
 """2) функции передаем полный путь к папке в виде строки в формате "./path/to/folder",
@@ -34,15 +36,18 @@ print("###############################################TWO#######################
 
 # 2
 def list_dir(path='C:/temp/temp'):
-    files = []
+    res = []
     for file in os.listdir(path):
-        files.append(file.split(","))
-        for lst_file in file:
-            if lst_file == ".":
-                print(file)
+        filename_path = os.path.join(path, file)
+        if os.path.isfile(filename_path):
+            res.append(filename_path)
 
 
-list_dir()
+    return res
+
+res = list_dir()
+
+print(f"TWO:::: >> {res}")
 print("##############################################################################################################")
 
 """3) функции передаем полный путь к папке в виде строки в формате "./path/to/folder",
@@ -55,15 +60,15 @@ print(
     "###############################################THREE############################################################")
 
 
-def list_dir_dict(path='C:/temp'):
-    for file in list(set(os.listdir(path=path))):
-        dict_list = {'files': os.path.join(file), 'folders': os.path.abspath(path)}
-        print(dict_list)
+def list_dir_dict(path='C:/temp/temp'):
+    dict_list = []
+    for file in list(os.listdir(path=path)):
+        dict_list.append({'files': os.path.join(file), 'folders': os.path.abspath(path)})
+        return dict_list
 
-
-list_dir_dict()
-print(
-    "##################################################################################################################")
+dict_list = list_dir_dict()
+print(f"THREE:::: >> {dict_list}")
+print("##################################################################################################################")
 
 """4) функции передаем полный путь к папке в виде строки в формате "./path/to/folder",
 где точка означает текущую директорию.
@@ -74,14 +79,14 @@ print(
 print("###############################################FOUR############################################################")
 
 
-def make_dir(path='C:/temp/temp4'):
-    scan = os.listdir(path)
-    if int(len(scan)) == 0:
-        os.mkdir("c://temp/temp4/temp")
-    else:
-        for i_mk in scan:
-            os.renames(f"c://temp/temp4/{i_mk}", f"c://temp/temp4/{i_mk}_tmp")
-            # os.rename(f"'{i_mk}", f"'{i_mk}_{i_mk}'")
-
-
-make_dir()
+# def make_dir(path='C:/temp/temp4'):
+#     scan = os.listdir(path)
+#     if os.path.isdir(path):
+#         os.mkdir(path)
+#     else:
+#         for i_mk in scan:
+#             os.renames(f"{path'/'i_mk}", f"{path'/'i_mk}_tmp")
+#             # os.rename(f"'{i_mk}", f"'{i_mk}_{i_mk}'")
+#
+#
+# make_dir()
