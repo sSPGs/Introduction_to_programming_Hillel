@@ -60,14 +60,16 @@ print(
     "###############################################THREE############################################################")
 
 
-def list_dir_dict(path='C:/temp/temp'):
-    dict_list = []
-    for file in list(os.listdir(path=path)):
-        dict_list.append({'files': os.path.join(file), 'folders': os.path.abspath(path)})
-        return dict_list
-
-dict_list = list_dir_dict()
-print(f"THREE:::: >> {dict_list}")
+# def list_dir_dict(path='C:/temp/temp'):
+#
+#     for file in list(os.listdir(path=path)):
+#         files = os.path.join(path, files)
+#
+#
+#     return dict_list
+#
+# dict_list = list_dir_dict()
+# print(f"THREE:::: >> {type(dict_list)} {dict_list}")
 print("##################################################################################################################")
 
 """4) функции передаем полный путь к папке в виде строки в формате "./path/to/folder",
