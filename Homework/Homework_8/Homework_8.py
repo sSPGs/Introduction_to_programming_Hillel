@@ -41,8 +41,6 @@ def list_dir(path='C:/temp/temp'):
         filename_path = os.path.join(path, file)
         if os.path.isfile(filename_path):
             res.append(filename_path)
-
-
     return res
 
 res = list_dir()
@@ -60,16 +58,21 @@ print(
     "###############################################THREE############################################################")
 
 
-# def list_dir_dict(path='C:/temp/temp'):
-#
-#     for file in list(os.listdir(path=path)):
-#         files = os.path.join(path, files)
-#
-#
-#     return dict_list
-#
-# dict_list = list_dir_dict()
-# print(f"THREE:::: >> {type(dict_list)} {dict_list}")
+def list_dir_dict(path='C:/temp/temp'):
+    folder = []
+    files = []
+    for file in list(os.listdir(path=path)):
+        path_to_file = os.path.join(path, file)
+        if os.path.isfile(path_to_file):
+            files.append(file)
+        else:
+            folder.append(file)
+    return files, folder
+
+files, folders = list_dir_dict()
+dict_list = {f'"files":{files}, "folders":{folders}'}
+print(dict_list)
+
 print("##################################################################################################################")
 
 """4) функции передаем полный путь к папке в виде строки в формате "./path/to/folder",
