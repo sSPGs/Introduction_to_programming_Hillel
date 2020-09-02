@@ -56,7 +56,7 @@ path_dict = third_function(path)
 Значение по умолчанию - текущая папка. Т.е. third_function() вернет словарь с файлами и подпапками из текущей папки."""
 print(
     "###############################################THREE############################################################")
-
+# 3
 
 def list_dir_dict(path='C:/temp/temp'):
     folder = []
@@ -67,11 +67,13 @@ def list_dir_dict(path='C:/temp/temp'):
             files.append(file)
         else:
             folder.append(file)
+
+
     return files, folder
 
-files, folders = list_dir_dict()
-dict_list = {f'"files":{files}, "folders":{folders}'}
-print(dict_list)
+files, folder = list_dir_dict()
+dct_dir = {'files': files, 'folders': folder}
+print(type(dct_dir))
 
 print("##################################################################################################################")
 
@@ -82,7 +84,7 @@ print("#########################################################################
 - если в этой директории есть подпапки - создает папки в названии которых дописываем '_tmp'.
 Пример. Есть подпапка 'test'. значит создаем 'test_tmp'"""
 print("###############################################FOUR############################################################")
-
+# 4
 
 # def make_dir(path='C:/temp/temp4'):
 #     scan = os.listdir(path)
@@ -90,8 +92,8 @@ print("###############################################FOUR######################
 #         os.mkdir(path)
 #     else:
 #         for i_mk in scan:
-#             os.renames(f"{path'/'i_mk}", f"{path'/'i_mk}_tmp")
-#             # os.rename(f"'{i_mk}", f"'{i_mk}_{i_mk}'")
+#             os.renames
+#
 #
 #
 # make_dir()
