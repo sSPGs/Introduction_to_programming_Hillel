@@ -73,7 +73,7 @@ def list_dir_dict(path='C:/temp/temp'):
 
 files, folder = list_dir_dict()
 dct_dir = {'files': files, 'folders': folder}
-print(type(dct_dir))
+print(f'THREE::::>>"{dct_dir}"')
 
 print("##################################################################################################################")
 
