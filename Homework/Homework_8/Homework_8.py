@@ -86,14 +86,21 @@ print("#########################################################################
 print("###############################################FOUR############################################################")
 # 4
 
-# def make_dir(path='C:/temp/temp4'):
-#     scan = os.listdir(path)
-#     if os.path.isdir(path):
-#         os.mkdir(path)
-#     else:
-#         for i_mk in scan:
-#             os.renames
-#
-#
-#
-# make_dir()
+def make_dir(path='C:/temp/temp4'):
+
+    if not os.path.isdir(path):
+        os.path.isdir(path)
+        os.mkdir(f'{path}/tmp')
+    else:
+        for i_mk in os.listdir(path):
+            os.renames(os.path.join(path, i_mk), os.path.join(path,i_mk + '_tmp'))
+
+
+        return i_mk
+
+
+i_mk = make_dir()
+print(i_mk)
+
+
+
