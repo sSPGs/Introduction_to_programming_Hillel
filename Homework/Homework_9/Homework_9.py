@@ -1,4 +1,6 @@
-import os
+import random
+import string
+
 '''Цель задания - создать функции, которые будут генерировать случайные данные нужного формата
 для записи в файлы разных типов.
 '''
@@ -9,10 +11,25 @@ import os
 В строке должны присутствовать большие и маленькие буквы английского алфавита, цифры, пробелы, знаки препинания.
 Также необходимо обязательно использовать РОВНО 9 символов перехода на новую строку (\n) В СЕРЕДИНЕ данной строки.
 '''
-def write_txt():
-    with open('gen.txt', 'w') as file:
-        for file
 
+
+def write_txt():
+    letters = string.ascii_letters
+    digits = string.digits
+    punct = string.punctuation
+    fee = letters + digits + punct
+    length = random.randint(30, 300)
+    psswrd = ''
+
+    for i in range(length):
+        fee = (random.randrange(len(fee)))
+        psswrd = length[fee]
+
+
+    print(psswrd)
+
+
+write_txt()
 
 '''
 Функция 2. Создает данные для записи в файл json.
