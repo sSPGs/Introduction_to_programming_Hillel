@@ -16,26 +16,14 @@ print("######################################################")
 '''2. Дано целое число (int). Определить сколько нулей в конце этого числа.'''
 ####################################################
 
-numb_int = 10203000
-numb_str = str(numb_int)
-numb_str = numb_str[::-1]
-a_str = []
-idx_base = []
-value_base = []
+number = 10011230000
+number_list = list(str(number))
 count = 0
-res = []
 
+while number_list.pop() == "0":
+    count += 1
 
-for it, v in enumerate(numb_str):
-    idx_base.append(v)
-    for i in idx_base[i]:
-        idx_base[it] > "0":
-
-
-
-
-print(f" TASK 2 VALUE {idx_base}")
-print(f" TASK 2  ID {value_base}")
+print(count)
 
 
 ####################################################
@@ -82,7 +70,6 @@ print("######################################################")
 ####################################################
 
 my_list = [1, 2, 3, 4]
-# my_list.insert(0, 2)
 my_list.insert(0, my_list.pop(1))
 my_list.insert(1, my_list.pop(2))
 my_list.insert(2, my_list.pop(3))
@@ -101,38 +88,18 @@ print(my_list)
 Например "43 больше чем 34, но меньше чем 56". Найти сумму ВСЕХ чисел в этой строке.'''
 ####################################################
 
-my_str = "43 больше чем 34, но меньше чем 56"
-my_str.split()
-box_int = []
+my_str_simple = "43 больше чем 34, но меньше чем 56."
 
-'''Цикл for iter_str_and_int in my_str:  '''
-for iter_str_and_int in my_str:
-    if iter_str_and_int in "1234567890":
-        iter_str_and_int = int(iter_str_and_int)
-        box_int.append((iter_str_and_int)) ## Выбераем из строки  цифры и помещаем в список box_int
-    else:
-        pass
+sum_numbers_str = ""
+sum_numbers_int = 0
 
-a, b = box_int[0], box_int[1]
-a = str(a)
-b = str(b)
-ab = a+b
-ab = int(ab)
 
-c, d = box_int[2], box_int[3]
-c = str(c)
-d = str(d)
-cd = c+d
-cd = int(cd)
+my_list_simple = my_str_simple.split(" ")
+for number in my_list_simple:
+    if "," in number or "." in number or number.isdigit():
+        sum_numbers_int += int(number.strip(",."))
 
-e, f = box_int[4], box_int[5]
-e = str(e)
-f = str(f)
-ef = e + f
-ef = int(ef)
-
-res = (ab + cd + ef)
-print(res)
+print(sum_numbers_int)
 
 print("######################################################")
 ####################################################
@@ -143,6 +110,21 @@ print("######################################################")
   Примеры: 'abcd' -> ['ab', 'cd'], 'abc' -> ['ab', 'c_']'''
 ####################################################
 
+my_str = "abc"
+my_list = []
+
+index = 0
+
+
+if len(my_str) % 2:
+    my_str = my_str + "_"
+
+while len(my_list) < len(my_str) / 2:
+    my_list.append(my_str[index:(index + 2)])
+    index += 2
+
+
+print(my_list)
 
 
 
@@ -177,6 +159,13 @@ print(sub_str)
 my_str = "My long string", l_limit = "o", r_limit = "g" -> sub_str = "ng strin".'''
 ####################################################
 
+my_str = "My long string"
+l_limit = "o"
+r_limit = "g"
+
+sub_str = my_str[(my_str.find(l_limit) + 1):my_str.rfind(r_limit)]
+
+print(sub_str)
 
 
 
@@ -190,9 +179,18 @@ my_str = "My long string", l_limit = "o", r_limit = "g" -> sub_str = "ng strin".
 Крайние элементы списка никогда не учитываются, поскольку у них недостаточно соседей.
  Для списка [2,4,1,5,3,9,0,7] ответом будет 3 потому что 4 > 2+1, 5 > 1+3, 9>3+0.'''
 ####################################################
+list_number = [2, 4, 1, 5, 3, 9, 0, 7]
+count = 0
+index = 0
 
 
+for number in list_number[1:-1]:
+    if number > list_number[index] + list_number[index + 2]:
+        count += 1
+    index += 1
 
+
+print(count)
 
 
 
